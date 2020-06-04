@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 const PIRATEBAY_SITE =
-  process.env.PIRATEBAY_SITE || "https://thepiratebay.org/search/{term}";
+  process.env.PIRATEBAY_SITE || "https://thepiratebay.org/search.php?q={term}&all=on&search=Pirate+Search&page=0&orderby=";
 
 async function search(search, site = PIRATEBAY_SITE) {
   try {
