@@ -1,9 +1,41 @@
 {
   "name": "torrent-aio-bot",
   "description": "All in one bot for torrenting",
-  "repository": "https://github.com/patheticGeek/torrent-aio-bot",
   "keywords": ["node", "express", "bot", "torrent", "automation"],
-  "builpacks": [
+  "env": {
+		"SITE": {
+			"description": "Value is the link of your site. Should be the same with app name above."
+		},
+	  "AUTH_CODE": {
+			"description": "Auth code.",
+			"required": false
+		},
+	  "GDRIVE_PARENT_FOLDER": {
+			"description": "Google Drive Path",
+			"required": false
+		},
+	  "TOKEN": {
+			"description": "Enter token.",
+			"required": false
+		},
+    "TELEGRAM_TOKEN": {
+			"description": "Your bot telegram bot token.",
+			"required": false
+		},
+    "CLIENT_ID": {
+			"description": "Drive client id.",
+			"required": false
+		},
+    "CLIENT_SECRET": {
+			"description": "Drive client secret.",
+			"required": false
+		},
+    "SEARCH_SITE": {
+			"description": "Default search site.",
+			"value": "https://torrent-aio-bot.herokuapp.com/"
+		}
+	},
+  "buildpacks": [
     { "url": "heroku/nodejs" },
     { "url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git" }
   ]
