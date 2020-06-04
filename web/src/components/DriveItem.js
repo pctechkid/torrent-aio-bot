@@ -21,7 +21,7 @@ export default function DriveItem({ item: { id, name, modifiedTime, iconLink, mi
             Open folder
           </Link>
         ) : (
-          <a className="btn primary m-0 mt-1" href={`/api/v1/drive/file/${name}?id=${id}`} download>
+          <a className="btn primary m-0 mt-1" href={`/api/v1/drive/file/${name.replace(/\[/g,'%5B').replace(/\]/g,'%5D')}?id=${id}`} download>
             Download
           </a>
         )}
